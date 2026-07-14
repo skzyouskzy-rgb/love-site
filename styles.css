@@ -1,118 +1,77 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
-    background: linear-gradient(135deg, #ffd6e8, #d8c7ff);
-    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(135deg, #0f1020, #2b1b3d, #402040);
+    font-family: "Arial", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
+
+.header_text {
+    color: #fff;
+    font-size: 38px;
+    text-shadow: 0 0 15px rgba(255,255,255,0.5);
+    margin-bottom: 25px;
+}
+
+.gif_container img {
+    width: 280px;
+    max-width: 80%;
+    border-radius: 25px;
+    box-shadow: 0 0 30px rgba(255, 170, 220, 0.4);
+}
+
+.buttons {
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.btn {
+    background: linear-gradient(135deg, #ff7eb3, #ff4f81);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 35px;
+    font-size: 22px;
+    cursor: pointer;
+    box-shadow: 0 8px 20px rgba(255, 100, 160, 0.4);
+    transition: 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.1);
 }
 
 #noButton {
     position: absolute;
-    margin-left: 150px;
-    transition: 0.5s;
-    position: absolute;
-}
-
-#yesButton {
-    position: absolute;
-    margin-right: 150px;
-}
-
-.header_text {
-    font-family: 'Nunito';
-    font-size: 40px;
-    font-weight: bold;
-    color: #FFB6C1;
-    text-align: center;
-    margin-top: 20px;
-    margin-bottom: 0px;
-}
-
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    margin-top: 20px;
-    margin-left: 20px;
-}
-
-.btn {
-    background-color: #FFB6C1;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    display: inline-block;
-    font-size: 16px;
-    margin: 4px 2px;
-    cursor: pointer;
-    border: none;
-    border-radius: 12px;
-    transition: background-color 0.3s ease;
-}
-
-.gif_container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 90px;
-}
-
-h1 {
-    font-family: Arial, sans-serif;
-    color: #ff4d88;
-    font-size: 45px;
-}
-
-button {
-    border-radius: 25px;
-    padding: 15px 35px;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-img {
-    max-width: 300px;
-    max-height: 300px;
-    object-fit: contain;
-}
-
-h1, p, button {
-    position: relative;
-    z-index: 10;
-}
-
-.container {
-    background: rgba(255, 255, 255, 0.7);
-    padding: 40px;
-    border-radius: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-}
-
-button {
-    background: #ff6fa5;
-    color: white;
-    border: none;
-    border-radius: 30px;
-    padding: 15px 35px;
-    font-size: 20px;
-    transition: 0.3s;
-}
-
-button:hover {
-    transform: scale(1.1);
 }
 
 @media (max-width: 600px) {
-
     .header_text {
         font-size: 30px;
     }
 
     .gif_container img {
-        width: 250px;
-        height: auto;
+        width: 220px;
     }
 
     .btn {
-        font-size: 20px;
-        padding: 15px 30px;
+        font-size: 18px;
+        padding: 12px 28px;
     }
 }
