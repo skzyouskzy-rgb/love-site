@@ -18,6 +18,8 @@ body {
     text-align: center;
     width: 90%;
     max-width: 500px;
+    position: relative;
+    z-index: 1;
 }
 
 .header_text {
@@ -103,11 +105,10 @@ body {
     background-image:
         radial-gradient(white 1px, transparent 1px),
         radial-gradient(white 2px, transparent 2px);
-    background-size: 70px 70px, 120px 120px;
-    background-position: 20px 30px, 60px 90px;
-    opacity: 0.6;
-    z-index: -1;
-    animation: starsMove 20s linear infinite;
+    background-size: 60px 60px, 100px 100px;
+    opacity: 0.8;
+    z-index: 0;
+    pointer-events: none;
 }
 
 @keyframes starsMove {
