@@ -75,3 +75,22 @@ body {
         padding: 12px 28px;
     }
 }
+.header_text {
+    animation: fadeIn 2s ease;
+}
+
+.gif_container {
+    animation: fadeIn 3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
