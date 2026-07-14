@@ -24,10 +24,10 @@
 
                     function moveButton() {
     const button = document.getElementById('noButton');
-
-    const x = Math.random() * (window.innerWidth - button.offsetWidth);
-    const y = Math.random() * (window.innerHeight - button.offsetHeight);
-
+    const maxX = window.innerWidth - button.offsetWidth - 10;
+    const maxY = window.innerHeight - button.offsetHeight - 10;
+    const x = Math.max(10, Math.random() * maxX);
+    const y = Math.max(10, Math.random() * maxY);
     button.style.position = "fixed";
     button.style.left = `${x}px`;
     button.style.top = `${y}px`;
@@ -39,11 +39,14 @@
             const starsContainer = document.getElementById('stars');
             const starCount = 60;
             for (let i = 0; i < starCount; i++) {
+                const isSparkle = i % 6 === 0;
                 const star = document.createElement('div');
-                star.className = 'star';
-                const size = Math.random() * 2 + 1;
-                star.style.width = `${size}px`;
-                star.style.height = `${size}px`;
+                star.className = isSparkle ? 'star-sparkle' : 'star';
+                if (!isSparkle) {
+                    const size = Math.random() * 2 + 1;
+                    star.style.width = `${size}px`;
+                    star.style.height = `${size}px`;
+                }
                 star.style.top = `${Math.random() * 100}%`;
                 star.style.left = `${Math.random() * 100}%`;
                 star.style.animationDelay = `${Math.random() * 3}s`;
