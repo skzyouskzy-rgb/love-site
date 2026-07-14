@@ -7,7 +7,7 @@ body {
     padding: 0;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(135deg, #0f1020, #2b1b3d, #402040);
+    background: linear-gradient(135deg, #050816, #151033, #2b123d);
     font-family: "Arial", sans-serif;
     display: flex;
     justify-content: center;
@@ -92,5 +92,30 @@ body {
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image:
+        radial-gradient(white 1px, transparent 1px),
+        radial-gradient(white 2px, transparent 2px);
+    background-size: 70px 70px, 120px 120px;
+    background-position: 20px 30px, 60px 90px;
+    opacity: 0.6;
+    z-index: -1;
+    animation: starsMove 20s linear infinite;
+}
+
+@keyframes starsMove {
+    from {
+        background-position: 20px 30px, 60px 90px;
+    }
+
+    to {
+        background-position: 20px 150px, 60px 210px;
     }
 }
