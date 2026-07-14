@@ -2,194 +2,119 @@
     box-sizing: border-box;
 }
 
-
 body {
     margin: 0;
     padding: 0;
-
     height: 100vh;
-
     overflow: hidden;
-
-    background: linear-gradient(
-        135deg,
-        #f8dff5,
-        #e8d7f8,
-        #cbbaf5
-    );
-
     font-family: Arial, sans-serif;
-
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #fff9ff;
+    background: radial-gradient(circle at 50% 30%,
+                rgba(255,220,240,0.10) 0%,
+                rgba(200,170,230,0.06) 12%,
+                rgba(140,100,180,0.10) 42%,
+                rgba(80,50,120,0.18) 100%),
+              linear-gradient(180deg, #2b1640 0%, #4b2f63 60%, #6a3f7f 100%);
 }
-
-
 
 .container {
-
     text-align: center;
-
     width: 90%;
-
-    max-width: 500px;
-
+    max-width: 520px;
+    padding: 28px;
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+    box-shadow: 0 10px 30px rgba(20,8,40,0.5), inset 0 1px 0 rgba(255,255,255,0.02);
+    backdrop-filter: blur(4px);
+    animation: gentleShift 14s ease-in-out infinite;
 }
-
-
-
-/* Текст */
 
 .header_text {
-
-    color: #7b4b8f;
-
+    color: #ffe7fb;
     font-size: 38px;
-
-    margin-bottom: 25px;
-
-    text-shadow:
-    0 0 10px rgba(255,255,255,0.9);
-
+    margin-bottom: 22px;
+    text-shadow: 0 6px 18px rgba(60,30,60,0.45);
     animation: appear 1.5s ease;
-
+    line-height: 1.05;
+    font-weight: 700;
 }
-
-
-
-/* Картинка */
 
 .gif_container img {
-
     width: 280px;
-
     max-width: 80%;
-
-    border-radius: 25px;
-
-    box-shadow:
-    0 0 25px rgba(180,120,220,0.4);
-
-    animation: appear 2s ease;
-
+    border-radius: 24px;
+    box-shadow: 0 12px 40px rgba(50,20,80,0.45);
+    animation: appear 1.6s ease;
+    border: 4px solid rgba(255,230,245,0.06);
+    background-color: rgba(255,255,255,0.02);
+    display: block;
+    margin: 0 auto;
 }
-
-
-
-/* Кнопки */
 
 .buttons {
-
-    margin-top: 35px;
-
+    margin-top: 30px;
     display: flex;
-
     justify-content: center;
-
-    gap: 25px;
-
+    gap: 22px;
 }
-
-
 
 .btn {
-
-    background: linear-gradient(
-        135deg,
-        #ff8fcf,
-        #d88cff
-    );
-
+    background: linear-gradient(135deg, rgba(255,140,203,0.95), rgba(216,140,255,0.95));
     color: white;
-
     border: none;
-
     border-radius: 30px;
-
-    padding: 15px 35px;
-
-    font-size: 22px;
-
+    padding: 14px 34px;
+    font-size: 20px;
     cursor: pointer;
-
-    box-shadow:
-    0 8px 20px rgba(200,100,200,0.3);
-
-    transition: 0.3s;
-
+    box-shadow: 0 8px 18px rgba(120,60,120,0.22);
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+    -webkit-tap-highlight-color: transparent;
 }
 
-
-
-.btn:hover {
-
-    transform: scale(1.1);
-
+.btn:hover,
+.btn:active {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 14px 30px rgba(120,60,120,0.28);
 }
-
-
-
-/* Кнопка "Нет" */
 
 #noButton {
-
     position: absolute;
-
+    transition: transform 0.25s ease, left 0.25s ease, top 0.25s ease;
 }
-
-
-
-/* Появление */
 
 @keyframes appear {
-
     from {
-
         opacity: 0;
-
         transform: translateY(35px);
-
     }
-
-
     to {
-
         opacity: 1;
-
         transform: translateY(0);
-
     }
-
 }
 
-
-
-/* Для телефона */
+@keyframes gentleShift {
+  0% { transform: translateY(0px) scale(1); }
+  50% { transform: translateY(-6px) scale(1.005); }
+  100% { transform: translateY(0px) scale(1); }
+}
 
 @media(max-width:600px) {
-
-
     .header_text {
-
         font-size: 30px;
-
     }
-
-
     .gif_container img {
-
         width: 220px;
-
     }
-
-
     .btn {
-
         font-size: 18px;
-
         padding: 12px 28px;
-
     }
-
+    .container {
+        padding: 18px;
+        border-radius: 14px;
+    }
 }
