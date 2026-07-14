@@ -21,18 +21,17 @@
                     function nextPage() {
                         window.location.href = "yes.html";
                     }
-
                     function moveButton() {
-    const button = document.getElementById('noButton');
-    const maxX = window.innerWidth - button.offsetWidth - 10;
-    const maxY = window.innerHeight - button.offsetHeight - 10;
-    const x = Math.max(10, Math.random() * maxX);
-    const y = Math.max(10, Math.random() * maxY);
-    button.style.position = "fixed";
-    button.style.left = `${x}px`;
-    button.style.top = `${y}px`;
-}
-               </script>
+                        const button = document.getElementById('noButton');
+                        const maxX = window.innerWidth - button.offsetWidth - 10;
+                        const maxY = window.innerHeight - button.offsetHeight - 10;
+                        const x = Math.max(10, Math.random() * maxX);
+                        const y = Math.max(10, Math.random() * maxY);
+                        button.style.position = "fixed";
+                        button.style.left = `${x}px`;
+                        button.style.top = `${y}px`;
+                    }
+                </script>
             </div>
         </div>
         <script>
