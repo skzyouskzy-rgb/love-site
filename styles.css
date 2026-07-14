@@ -12,12 +12,11 @@ body {
     justify-content: center;
     align-items: center;
     color: #fff9ff;
-    background: radial-gradient(circle at 50% 30%,
-                rgba(255,220,240,0.10) 0%,
-                rgba(200,170,230,0.06) 12%,
-                rgba(140,100,180,0.10) 42%,
-                rgba(80,50,120,0.18) 100%),
-              linear-gradient(180deg, #2b1640 0%, #4b2f63 60%, #6a3f7f 100%);
+    background:
+        radial-gradient(circle at 20% 20%, rgba(255, 180, 220, 0.10) 0%, transparent 28%),
+        radial-gradient(circle at 80% 30%, rgba(180, 160, 255, 0.12) 0%, transparent 30%),
+        radial-gradient(circle at 50% 85%, rgba(255, 130, 190, 0.08) 0%, transparent 26%),
+        linear-gradient(180deg, #1b102b 0%, #26163b 45%, #3a2754 100%);
 }
 
 .container {
